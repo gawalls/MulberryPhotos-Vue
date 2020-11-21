@@ -1,0 +1,12 @@
+[
+    {
+        "Id": 1,
+        "CreatedOn": "2020-01-01",
+        "Name": "Record one"
+    },
+    {
+        "Id": 2,
+        "CreatedOn": "2020-11-30",
+        "Name": "Record two"
+    }
+]
