@@ -12,8 +12,6 @@ const getTestData = async function() {
     d.CreatedOn = format(isoCreatedOn, displayDateFormat);
     return d;
   });
-
-  //const returnData = response.data;
   return returnData;
 };
 

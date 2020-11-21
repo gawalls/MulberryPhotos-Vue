@@ -21,7 +21,7 @@ export default {
     HelloWorld
   },
   async created() {
-    this.loadData();
+    await this.loadData();
   },
   methods: {
     async loadData() {
