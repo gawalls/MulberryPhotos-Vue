@@ -26,7 +26,7 @@ export default {
   methods: {
     async loadData() {
       this.tData = [];
-      this.tData = await data.getTestData();
+      this.tData = await data.getData();
     }
   }
 };

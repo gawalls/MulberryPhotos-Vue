@@ -1,15 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <MainMenuNavBar />
   </div>
 </template>
 
+<script>
+import MainMenuNavBar from "@/components/MainMenuNavBar.vue";
+
+export default {
+  name: "App",
+  components: { MainMenuNavBar }
+};
+</script>
+
 <style lang="scss">
-@import "src/assets/scss/main.scss";
+@import "@/assets/scss/main.scss";
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
