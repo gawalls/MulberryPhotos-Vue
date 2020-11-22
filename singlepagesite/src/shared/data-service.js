@@ -4,7 +4,7 @@ import { API } from "./config";
 import { displayDateFormat } from "./constants";
 
 const getTestData = async function() {
-  const response = await axios.get(`${API}/testData.json`);
+  const response = await axios.get(`${API}/db.json`);
   let data = parseList(response);
 
   const returnData = data.map(d => {
