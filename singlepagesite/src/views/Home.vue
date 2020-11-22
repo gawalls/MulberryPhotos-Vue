@@ -1,24 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <button @click="showModal = true">Show Modal</button>
+    <Modal
+      message="Are you sure you would like confirm?"
+      :isOpen="showModal"
+      @handleNo="closeModal"
+      @handleYes="handleModalYes"
+    >
+    </Modal>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Modal from "@/components/Modal";
 import { data } from "../shared";
 
 export default {
   name: "Home",
   data() {
     return {
-      tData: []
+      tData: [],
+      showModal: false
     };
   },
   components: {
-    HelloWorld
+    Modal
   },
   async created() {
     await this.loadData();
@@ -27,6 +34,14 @@ export default {
     async loadData() {
       this.tData = [];
       this.tData = await data.getData();
+    },
+    closeModal() {
+      this.showModal = false;
+    },
+    handleModalYes() {
+      this.closeModal();
+      alert("modal save");
+      //code will go here to deal with yes
     }
   }
 };
