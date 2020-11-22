@@ -3,7 +3,7 @@ import * as axios from "axios";
 import { API } from "./config";
 import { displayDateFormat } from "./constants";
 
-const getTestData = async function() {
+const getData = async function() {
   const response = await axios.get(`${API}/db.json`);
   let data = parseList(response);
 
@@ -26,5 +26,5 @@ const parseList = response => {
 };
 
 export const data = {
-  getTestData
+  getData
 };
