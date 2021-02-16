@@ -1,15 +1,31 @@
 <template>
   <div id="app">
-    <MainMenuNavBar />
+    <section id="headerBanner">      
+      <div class="columns is-vcentered is-centered">
+        <div class="column is-hidden-touch is-one-third">          
+          <div class="image is-3by1">
+          <img isfullwidth src="./assets/HeroImage1.jpg"/>                
+          </div>
+        </div>        
+        <div class="column has-text-centered">
+          <h1 class="headerBannerH1 title is-1">Mulberry Photos</h1>
+        </div>
+        <div class="column is-hidden-touch is-one-third">          
+          <div class="image is-3by1">
+            <img isfullwidth src="./assets/HeroImage2.jpg"/>                          
+          </div>
+        </div>
+      </div>      
+    </section>
+    <div id="columns">      
+    </div>
   </div>
 </template>
 
 <script>
-import MainMenuNavBar from "@/components/MainMenuNavBar.vue";
 
 export default {
-  name: "App",
-  components: { MainMenuNavBar }
+  name: "App"
 };
 </script>
 
