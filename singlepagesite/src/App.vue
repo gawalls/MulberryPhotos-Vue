@@ -8,7 +8,7 @@
           </div>
         </div>        
         <div class="column has-text-centered">
-          <h1 class="headerBannerH1 title is-1">Mulberry Photos</h1>
+          <h1 class="headerBannerH1 title is-size-3-mobile is-size-1-tablet">Mulberry Photos</h1>
         </div>
         <div class="column is-hidden-touch is-one-third">          
           <div class="image is-3by1">
@@ -17,8 +17,16 @@
         </div>
       </div>      
     </section>
-    <div id="columns">      
-    </div>
+    <section id="mainOutput">
+      <div class="columns">      
+        <div class="column is-one-third">
+          <p>Main menu</p>
+        </div>
+        <div class="column">
+          <p>Main output</p>
+        </div>
+      </div>
+    </section>    
   </div>
 </template>
 
