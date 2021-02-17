@@ -1,23 +1,26 @@
-import { format, parseISO } from "date-fns";
+//import { format, parseISO } from "date-fns";
 import * as axios from "axios";
 import { API } from "./config";
-import { displayDateFormat } from "./constants";
+//import { displayDateFormat } from "./constants";
 
 const getData = async function() {
   const response = await axios.get(`${API}/db.json`);
   let data = parseList(response);
-
-  const returnData = data.map(d => {
-    var isoCreatedOn = parseISO(d.CreatedOn);
-    d.CreatedOn = format(isoCreatedOn, displayDateFormat);
-    return d;
-  });
-  return returnData;
+  return data;
 };
+
+const getWebPages = async function() {
+  //const response = getData();  
+  var webPages = [{"title": "title 1", "description": "description 1"}];
+  return webPages;
+}
 
 const parseList = response => {
   if (response.status !== 200) throw Error(response.message);
-  if (!response.data) return [];
+  if (!response.data) {
+    return [];
+  }
+  
   let list = response.data;
   if (typeof list !== "object") {
     list = [];
@@ -26,5 +29,6 @@ const parseList = response => {
 };
 
 export const data = {
-  getData
+  getData,
+  getWebPages
 };

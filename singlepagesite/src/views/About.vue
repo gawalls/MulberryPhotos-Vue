@@ -20,7 +20,7 @@ export default {
   name: "About",
   data() {
     return {
-      tData: [],
+      contents: [],
       showModal: false
     };
   },
@@ -32,8 +32,8 @@ export default {
   },
   methods: {
     async loadData() {
-      this.tData = [];
-      this.tData = await data.getData();
+      this.contents = [];
+      this.contents = await data.getWebPages();
     },
     closeModal() {
       this.showModal = false;
