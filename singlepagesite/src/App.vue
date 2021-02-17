@@ -1,39 +1,43 @@
 <template>
   <div id="app">
-    <section id="headerBanner">      
-      <div class="columns is-vcentered is-centered">
-        <div class="column is-hidden-touch is-one-third">          
-          <div class="image is-3by1">
-          <img isfullwidth src="./assets/HeroImage1.jpg"/>                
-          </div>
-        </div>        
-        <div class="column has-text-centered">
-          <h1 class="headerBannerH1 title is-size-3-mobile is-size-1-tablet">Mulberry Photos</h1>
-        </div>
-        <div class="column is-hidden-touch is-one-third">          
-          <div class="image is-3by1">
-            <img isfullwidth src="./assets/HeroImage2.jpg"/>                          
-          </div>
-        </div>
-      </div>      
+    <section id="navBar">
+      <MainMenuNavBar />
     </section>
-    <section id="mainOutput">
-      <div class="columns">      
-        <div class="column is-one-third">
-          <p>Main menu</p>
+    <section id="headerBanner">
+      <div class="columns is-vcentered is-centered">
+        <div class="column is-hidden-touch is-one-third">
+          <div class="image is-3by1">
+            <img isfullwidth src="./assets/HeroImage1.jpg" />
+          </div>
         </div>
-        <div class="column">
-          <p>Main output</p>
+        <div class="column has-text-centered">
+          <h1 class="headerBannerH1 title is-size-3-mobile is-size-1-tablet">
+            Mulberry Photos
+          </h1>
+        </div>
+        <div class="column is-hidden-touch is-one-third">
+          <div class="image is-3by1">
+            <img isfullwidth src="./assets/HeroImage2.jpg" />
+          </div>
         </div>
       </div>
-    </section>    
+    </section>
+    <section id="mainOutput">
+      <div class="">
+        <router-view />
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+import MainMenuNavBar from "@/components/MainMenuNavBar.vue";
 
 export default {
-  name: "App"
+  name: "App",
+  components: {
+    MainMenuNavBar
+  }
 };
 </script>
 
@@ -59,5 +63,21 @@ export default {
       color: #42b983;
     }
   }
+}
+
+#headerBanner {
+  padding: 0em;
+  background-color: black;
+  text-align: left;
+  color: white;
+
+  .headerBannerH1 {
+    color: white;
+  }
+}
+
+#mainOutput {
+  text-align: left;
+  padding: 3em;
 }
 </style>

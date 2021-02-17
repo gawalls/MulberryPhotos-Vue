@@ -1,19 +1,2 @@
 @import "bulma";
 @import "variables";
-
-#headerBanner {
-  padding: 0em;
-  background-color: black;
-  text-align: left; 
-  color: white;    
-
-  .headerBannerH1 {
-    color: white;
-  }
-}
-
-#mainOutput {
-  background-color: yellow;
-  text-align: left;
-  padding: 1em;
-}

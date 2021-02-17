@@ -1,48 +1,11 @@
 <template>
-  <div class="home">
-    <button @click="showModal = true">Show Modal</button>
-    <Modal
-      message="Are you sure you would like confirm?"
-      :isOpen="showModal"
-      @handleNo="closeModal"
-      @handleYes="handleModalYes"
-    >
-    </Modal>
+  <div class="about">
+    <h1>This is the main page</h1>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Modal from "@/components/Modal";
-import { data } from "../shared";
-
 export default {
-  name: "Home",
-  data() {
-    return {
-      tData: [],
-      showModal: false
-    };
-  },
-  components: {
-    Modal
-  },
-  async created() {
-    await this.loadData();
-  },
-  methods: {
-    async loadData() {
-      this.tData = [];
-      this.tData = await data.getData();
-    },
-    closeModal() {
-      this.showModal = false;
-    },
-    handleModalYes() {
-      this.closeModal();
-      alert("modal save");
-      //code will go here to deal with yes
-    }
-  }
-};
+  name: "Home"  
+}
 </script>
