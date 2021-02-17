@@ -2,6 +2,7 @@
   <div class="columns">
     <div class="column">
       <div id="nav" class="is-hidden-mobile">
+        <img id="nav-logo" src="@/assets/mulberry_photos_header.jpg" />
         <router-link to="/home">Content</router-link> |
         <router-link to="/about">Contact us</router-link> |
         <router-link to="/askquestion">Ask a question</router-link>
@@ -28,6 +29,11 @@ export default {
     &.router-link-exact-active {
       color: #42b983;
     }
+  }
+
+  #nav-logo {
+    padding-right: 1em;
+    padding-top: 1em;
   }
 }
 </style>
