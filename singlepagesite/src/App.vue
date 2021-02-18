@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <section id="navBar">
+      <notifications group="notification" position="bottom right" />
       <MainMenuNavBar />
     </section>
     <section id="headerBanner">
@@ -27,6 +28,7 @@
         <router-view />
       </div>
     </section>
+    <div id="notification"></div>
   </div>
 </template>
 
@@ -37,6 +39,15 @@ export default {
   name: "App",
   components: {
     MainMenuNavBar
+  },
+  methods: {
+    sendNotification(title, message) {
+      this.$notify({
+        group: "notification",
+        title: title,
+        text: message
+      });
+    }
   }
 };
 </script>

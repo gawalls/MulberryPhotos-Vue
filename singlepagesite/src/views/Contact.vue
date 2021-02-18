@@ -17,7 +17,7 @@ import Modal from "@/components/Modal";
 import { data } from "../shared";
 
 export default {
-  name: "About",
+  name: "Contact",
   data() {
     return {
       contents: [],

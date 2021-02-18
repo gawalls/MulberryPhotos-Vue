@@ -3,8 +3,8 @@
     <div class="column">
       <div id="nav" class="is-hidden-mobile">
         <img id="nav-logo" src="@/assets/mulberry_photos_header.jpg" />
-        <router-link to="/home">Content</router-link> |
-        <router-link to="/about">Contact us</router-link> |
+        <router-link to="/home">About us</router-link> |
+        <router-link to="/contact">Contact us</router-link> |
         <router-link to="/askquestion">Ask a question</router-link>
       </div>
     </div>
