@@ -1,18 +1,11 @@
-//import { format, parseISO } from "date-fns";
 import * as axios from "axios";
 import { API } from "./config";
-//import { displayDateFormat } from "./constants";
 
 const getData = async function() {
   const response = await axios.get(`${API}/db.json`);
   let data = parseList(response);
+  console.log(data);
   return data;
-};
-
-const getWebPages = async function() {
-  //const response = getData();
-  var webPages = [{ title: "title 1", description: "description 1" }];
-  return webPages;
 };
 
 const parseList = response => {
@@ -29,6 +22,5 @@ const parseList = response => {
 };
 
 export const data = {
-  getData,
-  getWebPages
+  getData
 };

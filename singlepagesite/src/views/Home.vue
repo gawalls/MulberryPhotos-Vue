@@ -1,31 +1,38 @@
 <template>
-  <div id="home">    
-    <div v-for="(pageCont, index) in Content" :key="index">
+  <div id="home">
+    <div v-for="(pageCont, index) in content" :key="index">
       <WebPage :pageContent="pageCont" />
-    </div>
+    </div>    
   </div>
 </template>
 
 <script>
+import { data } from "../shared";
 import WebPage from "@/components/WebPage";
 
 export default {
   name: "Home",
   components: {
-    WebPage        
+    WebPage
+  },
+  async created() {
+    await this.loadData();
   },
   data() {
     return {
-      Content: [
-        {"Title": "Title 1", "Body": "<p>This is the body of the first</p>"},
-        {"Title": "Title 2", "Body": "This is the body of the second"}
-      ],
+      content: []
     };
   },
+  methods: {
+    async loadData() {
+      this.content = [];
+      this.content = await data.getData();
+    }
+  }
 };
 </script>
 <style scoped lang="scss">
-  #home {
-    color: black;
-  }
+#home {
+  color: black;
+}
 </style>

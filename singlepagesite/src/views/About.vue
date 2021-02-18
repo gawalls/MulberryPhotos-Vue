@@ -33,7 +33,7 @@ export default {
   methods: {
     async loadData() {
       this.contents = [];
-      this.contents = await data.getWebPages();
+      this.contents = await data.getData();
     },
     closeModal() {
       this.showModal = false;

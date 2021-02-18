@@ -1,7 +1,7 @@
 <template>
-  <div class="pageContent" v-if="pageContent != undefined">    
+  <div class="pageContent" v-if="pageContent != undefined">
     <h5 class="content-title is-size-4">{{ pageContent.Title }}</h5>
-    <div class="content-body" v-html="pageContent.Body" ></div>    
+    <div class="content-body" v-html="pageContent.Body"></div>
     <hr />
   </div>
 </template>
@@ -11,22 +11,22 @@ export default {
   name: "WebPage",
   props: {
     pageContent: undefined
-  },
+  }
 };
 </script>
 
 <style scoped lang="scss">
-  .pageContent {
-    padding-bottom: 10px;
-  }
+.pageContent {
+  padding-bottom: 10px;
+}
 
-  .content-title {
-    font-weight: bold;
-    font-style: italic;
-  }
+.content-title {
+  font-weight: bold;
+  font-style: italic;
+}
 
-  .content-body {
-    padding-left: 20px;
-    padding-top: 10px;
-  }
+.content-body {
+  padding-left: 20px;
+  padding-top: 10px;
+}
 </style>
