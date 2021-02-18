@@ -4,7 +4,6 @@ import { API } from "./config";
 const getData = async function() {
   const response = await axios.get(`${API}/db.json`);
   let data = parseList(response);
-  console.log(data);
   return data;
 };
 

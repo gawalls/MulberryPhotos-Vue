@@ -2,7 +2,7 @@
   <div id="home">
     <div v-for="(pageCont, index) in content" :key="index">
       <WebPage :pageContent="pageCont" />
-    </div>    
+    </div>
   </div>
 </template>
 
