@@ -3,8 +3,12 @@
     <div v-for="(pageCont, index) in content" :key="index">
       <WebPage :pageContent="pageCont" />
     </div>
-    <router-link to="/contact" class="button is-success">Contact us</router-link>
-    <router-link to="/askquestion" class="button is-warning">Ask Question</router-link>
+    <router-link to="/contact" class="button is-success"
+      >Contact us</router-link
+    >
+    <router-link to="/askquestion" class="button is-warning"
+      >Ask Question</router-link
+    >
   </div>
 </template>
 

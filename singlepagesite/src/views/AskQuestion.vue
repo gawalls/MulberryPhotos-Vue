@@ -14,18 +14,18 @@ export default {
   },
   methods: {
     submitQuestion() {
-      console.log('submit clicked');
+      console.log("submit clicked");
       this.$notify({
         group: "notification",
         title: "Submitted",
         type: "success",
-        text: "Your Question has been asked",        
+        text: "Your Question has been asked."
       });
       this.$notify({
         group: "notification",
         title: "Wait for Response",
-        text: "An answer will be emailed to you", 
-      });      
+        text: "An answer will be emailed to you."
+      });
     }
   }
 };

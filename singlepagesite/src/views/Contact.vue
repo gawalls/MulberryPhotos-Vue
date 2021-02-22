@@ -1,48 +1,25 @@
 <template>
   <div class="home">
-    <button @click="showModal = true">Show Modal</button>
-    <Modal
-      message="Are you sure you would like confirm?"
-      :isOpen="showModal"
-      @handleNo="closeModal"
-      @handleYes="handleModalYes"
-    >
-    </Modal>
+    <div class="card">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">Mulberry Photos</p>
+            <p class="subtitle is-6">Contact Information</p>
+          </div>
+        </div>
+        <div class="content">
+          We can be contacted on <a>mulberryphotos@gmail.com</a> or by using the
+          Ask a Question option above.
+          <br />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Modal from "@/components/Modal";
-import { data } from "../shared";
-
 export default {
-  name: "Contact",
-  data() {
-    return {
-      contents: [],
-      showModal: false
-    };
-  },
-  components: {
-    Modal
-  },
-  async created() {
-    await this.loadData();
-  },
-  methods: {
-    async loadData() {
-      this.contents = [];
-      this.contents = await data.getData();
-    },
-    closeModal() {
-      this.showModal = false;
-    },
-    handleModalYes() {
-      this.closeModal();
-      alert("modal save");
-      //code will go here to deal with yes
-    }
-  }
+  name: "About"
 };
 </script>

@@ -41,7 +41,7 @@ export default {
     MainMenuNavBar
   },
   methods: {
-    sendNotification(title, message) {      
+    sendNotification(title, message) {
       this.$notify({
         group: "notification",
         title: title,

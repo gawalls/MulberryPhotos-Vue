@@ -37,7 +37,9 @@
 
     <div class="field is-grouped">
       <div class="control">
-        <button class="button is-success" @click="submitQuestion">Submit</button>
+        <button class="button is-success" @click="submitQuestion">
+          Submit
+        </button>
       </div>
     </div>
   </div>
@@ -66,12 +68,13 @@ export default {
       }
     },
     formIsValid() {
-    //name
-    //email
-    //question
-    return true;
-    },
-  },  
+      //name
+      //email
+      //question
+      //modal confirmation
+      return true;
+    }
+  }
 };
 </script>
 
