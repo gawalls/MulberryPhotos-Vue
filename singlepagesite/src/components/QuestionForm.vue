@@ -65,13 +65,23 @@ export default {
         this.name = "";
         this.question = "";
         this.$emit("handleSubmit");
+      } else {
+        this.$emit("handleFormValidationError");
       }
     },
     formIsValid() {
-      //name
-      //email
-      //question
-      //modal confirmation
+      this.errorMessage = "";
+
+      if (
+        this.name == "" ||
+        this.email == "" ||
+        this.question == "" ||
+        this.question == ""
+      ) {
+        this.errorMessage =
+          "Please ensure all fields are filled in before continuing.";
+        return false;
+      }
       return true;
     }
   }

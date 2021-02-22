@@ -1,6 +1,9 @@
 <template>
   <div>
-    <QuestionForm @handleSubmit="submitQuestion" />
+    <QuestionForm
+      @handleSubmit="submitQuestion"
+      @handleFormValidationError="raiseValidationError"
+    />
   </div>
 </template>
 
@@ -14,7 +17,6 @@ export default {
   },
   methods: {
     submitQuestion() {
-      console.log("submit clicked");
       this.$notify({
         group: "notification",
         title: "Submitted",
@@ -25,6 +27,14 @@ export default {
         group: "notification",
         title: "Wait for Response",
         text: "An answer will be emailed to you."
+      });
+    },
+    raiseValidationError() {
+      this.$notify({
+        group: "notification",
+        title: "Form is incomplete",
+        type: "error",
+        text: "Please fill in all fields on the form."
       });
     }
   }
