@@ -37,28 +37,45 @@
 
     <div class="field is-grouped">
       <div class="control">
-        <button class="button is-success" @click="submitQuestion">
+        <button class="button is-success" @click="showModal = true">
           Submit
         </button>
       </div>
     </div>
+
+    <Modal
+      message="Are you sure you would like to ask this question?"
+      :isOpen="showModal"
+      @handleNo="closeModal"
+      @handleYes="submitQuestion"
+    >
+    </Modal>
   </div>
 </template>
 
 <script>
+import Modal from "@/components/Modal";
+
 export default {
   name: "QuestionForm",
+  components: { Modal },
   data() {
     return {
       name: "",
       email: "",
       question: "",
       hasError: false,
+      showModal: false,
       errorMessage: ""
     };
   },
   methods: {
+    closeModal() {
+      this.showModal = false;
+    },
     submitQuestion() {
+      this.closeModal();
+
       if (this.formIsValid() == true) {
         //the code to save the submit will go here - via the dataService.
 
@@ -70,7 +87,7 @@ export default {
       }
     },
     formIsValid() {
-      this.errorMessage = "";
+      this.hasError = false;
 
       if (
         this.name == "" ||
@@ -78,11 +95,9 @@ export default {
         this.question == "" ||
         this.question == ""
       ) {
-        this.errorMessage =
-          "Please ensure all fields are filled in before continuing.";
-        return false;
+        this.hasError = true;
       }
-      return true;
+      return this.hasError == false;
     }
   }
 };
