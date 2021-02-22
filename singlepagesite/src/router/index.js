@@ -15,13 +15,13 @@ const routes = [
     component: Home
   },
   {
-    path: "/about",
-    name: "About",
+    path: "/contact",
+    name: "Contact",
     // route level code-splitting
     // this generates a separate chunk (sitecontent.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "sitecontent" */ "../views/About.vue")
+      import(/* webpackChunkName: "sitecontent" */ "../views/Contact.vue")
   },
   {
     path: "/askquestion",

@@ -9,7 +9,8 @@
           </div>
         </div>
         <div class="content">
-          We can be contacted on <a>mulberryphotos@gmail.com</a> or by using the Ask a Question option above.           
+          We can be contacted on <a>mulberryphotos@gmail.com</a> or by using the
+          Ask a Question option above.
           <br />
         </div>
       </div>
